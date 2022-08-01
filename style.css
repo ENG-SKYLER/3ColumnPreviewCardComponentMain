@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --Bri-oran: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --v-dark-cyan: hsl(179, 100%, 13%);
+
+  --transp-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+
+  --font-size: 15px;
+
+  --font-family-1: "Big Shoulders Display", cursive;
+  --font-family-2: "Lexend Deca", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-gray);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.container > div {
+  padding: 40px;
+  width: 88%;
+  margin: auto;
+  max-width: 330px;
+}
+
+.container > div:nth-of-type(1) {
+  background-color: var(--Bri-oran);
+  border-radius: 10px 10px 0 0;
+}
+.container > div:nth-of-type(2) {
+  background-color: var(--dark-cyan);
+}
+.container > div:nth-of-type(3) {
+  background-color: var(--v-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+h1 {
+  font-family: var(--font-family-1);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--light-gray);
+}
+p {
+  font-family: var(--font-family-2);
+  color: var(--transp-white);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+input[type="button"] {
+  font-family: var(--font-family-2);
+  border-style: none;
+  background-color: white;
+  font-size: 16px;
+  padding: 13px 32px;
+  border-radius: 30px;
+  border: 2px solid var(--transp-white);
+}
+input[type="button"]:hover {
+  background-color: transparent;
+  color: var(--transp-white) !important;
+}
+.container > div:nth-of-type(2) input {
+  color: var(--dark-cyan);
+}
+.container > div:nth-of-type(1) input {
+  color: var(--Bri-oran);
+}
+.container > div:nth-of-type(3) input {
+  color: var(--v-dark-cyan);
+}
+@media (min-width: 800px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+  }
+  .container > div {
+    /* padding: 50px 70px 47px 50px; */
+    padding: 52px;
+    width: 34%;
+    height: 100%;
+  }
+  p {
+    margin-bottom: 5.3125rem;
+  }
+  .container > div:nth-of-type(3) {
+    border-radius: 0 10px 10px 0;
+  }
+  .container > div:nth-of-type(1) {
+    border-radius: 10px 0 0 10px;
+  }
+}
